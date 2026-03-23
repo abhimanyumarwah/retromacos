@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'Chicago';
+	src: local('Chicago'), local('Geneva');
+	font-display: swap;
+}
+
+:root {
+	--bg: #dfe7f1;
+	--ink: #000;
+}
+
+html, body, #root { height: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: Chicago, -apple-system, BlinkMacSystemFont, 'Geneva', Arial, sans-serif; }
+
+* { box-sizing: border-box; }

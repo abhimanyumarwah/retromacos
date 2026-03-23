@@ -1,0 +1,49 @@
+.ipod-frame { display:flex; align-items:center; justify-content:center; height:100%; }
+.ipod-body { width: 320px; border:1px solid #000; border-radius: 28px; padding: 16px; background: linear-gradient(#f9fbff,#e9eef6); box-shadow: 2px 2px 0 #000; }
+.ipod-screen { height: 180px; border:1px solid #000; border-radius: 8px; background: linear-gradient(#ffffff,#f3f5f9); box-shadow: inset 0 0 0 2px #e6e6e6; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.boot { font-size: 48px; }
+
+/* Theme variants */
+.ipod-body.theme-monochrome .ipod-screen { background: linear-gradient(#fefefe,#eaeaea); filter: grayscale(1); }
+.ipod-body.theme-inverted { background: linear-gradient(#222,#111); color:#f5f5f5; }
+.ipod-body.theme-inverted .ipod-screen { background: linear-gradient(#1b1b1b,#0f0f0f); box-shadow: inset 0 0 0 2px #333; }
+
+.menu { width:100%; height:100%; display:flex; flex-direction:column; }
+.menu .title { font-weight:700; padding:6px 8px; border-bottom:1px solid #000; background:#eaf0f7; }
+.menu ul { list-style:none; margin:0; padding:0; }
+.menu li { padding:6px 8px; border-bottom:1px dotted #aaa; }
+.menu li.active { background:#000; color:#fff; }
+
+.now { width:100%; height:100%; display:flex; flex-direction:column; }
+.now-top { display:flex; justify-content:flex-end; padding:4px; }
+.now .battery .bar { width:38px; height:10px; border:1px solid #000; position:relative; background:#e6e6e6; }
+.now .battery .bar::after { content:''; position:absolute; right:-4px; top:2px; width:3px; height:6px; border:1px solid #000; background:#fff; }
+.now .battery .level { height:100%; background:#44c767; }
+
+.screen-inner { display:flex; flex-direction:column; gap:8px; padding:8px; height:100%; }
+.screen-inner.backlight { box-shadow: inset 0 0 40px rgba(255,255,200,0.35); }
+
+.now .meta { display:flex; align-items:center; gap:8px; }
+.now .meta .art { width:48px; height:48px; border:1px solid #000; background:#fff; object-fit:cover; }
+.now .meta .art.placeholder { background: repeating-linear-gradient(45deg,#eee,#eee 6px,#ddd 6px,#ddd 12px); }
+.now .meta .text .title { font-weight:700; }
+.now .meta .text .artist { font-size:12px; color:#444; }
+.now .bar { height:8px; border:1px solid #000; background:#e6e6e6; position:relative; }
+.now .bar .fill { position:absolute; left:0; top:0; bottom:0; background:#000; width:0; }
+.now .status { font-size:12px; color:#333; }
+
+.settings { width:100%; height:100%; display:flex; flex-direction:column; gap:10px; padding:8px; }
+.settings .row { display:flex; align-items:center; justify-content:space-between; }
+
+.wheel { position:relative; margin: 16px auto 4px; width: 240px; height: 240px; border:1px solid #000; border-radius:50%; background:
+  conic-gradient(#000 calc(var(--progress, 0) * 1turn), transparent 0),
+  radial-gradient(circle at 50% 45%, #ffffff 0, #efefef 65%, #e0e0e0 100%);
+ box-shadow: 2px 2px 0 #000; }
+.wheel.glow { box-shadow: 0 0 14px rgba(0,0,0,0.35), 2px 2px 0 #000; }
+.wheel .btn { position:absolute; border:1px solid #000; background:#fff; cursor:pointer; box-shadow:2px 2px 0 #000; }
+.wheel .btn:active { transform: translate(2px,2px); box-shadow: 0 0 0 #000; }
+.wheel .menu { top: 10px; left: calc(50% - 30px); width:60px; height:26px; }
+.wheel .prev { left: 10px; top: calc(50% - 16px); width:52px; height:28px; }
+.wheel .next { right: 10px; top: calc(50% - 16px); width:52px; height:28px; }
+.wheel .play { bottom: 10px; left: calc(50% - 42px); width:84px; height:26px; }
+.wheel .select { position:absolute; left: calc(50% - 44px); top: calc(50% - 44px); width: 88px; height: 88px; border-radius:50%; border:1px solid #000; background: linear-gradient(#e9e9e9,#dcdcdc); box-shadow: inset 0 0 0 2px #cfcfcf; cursor: pointer; }

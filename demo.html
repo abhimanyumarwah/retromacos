@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Gauntlet - Demo & Features</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px #ffd700;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #ccc;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        
+        .demo-section {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+        }
+        
+        .feature-card h3 {
+            color: #ffd700;
+            margin-top: 0;
+        }
+        
+        .stone-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stone-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .stone-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .space-stone { background: linear-gradient(45deg, #0066ff, #0088ff); }
+        .mind-stone { background: linear-gradient(45deg, #ffdd00, #ffff00); }
+        .reality-stone { background: linear-gradient(45deg, #ff4444, #ff6666); }
+        .power-stone { background: linear-gradient(45deg, #aa44ff, #cc66ff); }
+        .time-stone { background: linear-gradient(45deg, #44ff44, #66ff66); }
+        .soul-stone { background: linear-gradient(45deg, #ff8844, #ffaa66); }
+        
+        .launch-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        .launch-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+        
+        .tech-specs {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .tech-specs h4 {
+            color: #ffd700;
+            margin-top: 0;
+        }
+        
+        .tech-specs ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .tech-specs li {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .tech-specs li:before {
+            content: "⚡ ";
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Infinity Gauntlet</h1>
+        <p class="subtitle">Interactive 3D Experience with Embedded Infinity Stone Powers</p>
+        
+        <div class="demo-section">
+            <h2>🚀 Launch the Experience</h2>
+            <p>Experience the power of the Infinity Stones in this fully interactive 3D recreation. Click the button below to launch the application.</p>
+            <a href="index.html" class="launch-button">Launch Infinity Gauntlet</a>
+        </div>
+
+        <div class="demo-section">
+            <h2>🖥️ Retro Mac OS (Browser Edition)</h2>
+            <p>Open the retro desktop environment with a System 7 vibe—menu bar, draggable windows, and an "About This Mac" app.</p>
+            <a href="retro-os.html" class="launch-button">Open Retro OS</a>
+        </div>
+        
+        <div class="demo-section">
+            <h2>💎 Infinity Stones Demo</h2>
+            <p>Each stone has unique powers and visual effects. Click the stones below to see their individual effects:</p>
+            
+            <div class="stone-demo">
+                <button class="stone-button space-stone" onclick="demoStone('space')">Space Stone</button>
+                <button class="stone-button mind-stone" onclick="demoStone('mind')">Mind Stone</button>
+                <button class="stone-button reality-stone" onclick="demoStone('reality')">Reality Stone</button>
+                <button class="stone-button power-stone" onclick="demoStone('power')">Power Stone</button>
+                <button class="stone-button time-stone" onclick="demoStone('time')">Time Stone</button>
+                <button class="stone-button soul-stone" onclick="demoStone('soul')">Soul Stone</button>
+            </div>
+        </div>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🎮 Interactive Controls</h3>
+                <p>• Mouse/touch controls for rotation and zoom<br>
+                • Click individual stones to activate powers<br>
+                • Full snap gesture with particle effects<br>
+                • Settings panel for customization</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🎨 Visual Effects</h3>
+                <p>• Real-time particle systems<br>
+                • Dynamic lighting for each stone<br>
+                • Glowing emissive materials<br>
+                • Screen-space effects and distortions</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🔊 Audio System</h3>
+                <p>• Procedural sound generation<br>
+                • Unique audio for each stone<br>
+                • Volume control settings<br>
+                • Dramatic snap sound effect</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>⚡ Performance</h3>
+                <p>• Optimized for 60fps<br>
+                • WebGL/Three.js powered<br>
+                • Responsive design<br>
+                • Cross-platform compatibility</p>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🛠️ Technical Specifications</h2>
+            <div class="tech-specs">
+                <h4>Core Technologies</h4>
+                <ul>
+                    <li>Three.js r128 for 3D rendering</li>
+                    <li>WebGL 2.0 for hardware acceleration</li>
+                    <li>Web Audio API for procedural sound</li>
+                    <li>CSS3 for UI and animations</li>
+                    <li>ES6+ JavaScript for modern features</li>
+                </ul>
+                
+                <h4>Features</h4>
+                <ul>
+                    <li>Physically-based rendering (PBR)</li>
+                    <li>Real-time particle systems</li>
+                    <li>Dynamic lighting and shadows</li>
+                    <li>Responsive UI controls</li>
+                    <li>Cross-browser compatibility</li>
+                </ul>
+                
+                <h4>Browser Support</h4>
+                <ul>
+                    <li>Chrome 90+ (Recommended)</li>
+                    <li>Firefox 88+</li>
+                    <li>Safari 14+</li>
+                    <li>Edge 90+</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🎯 How to Use</h2>
+            <ol>
+                <li><strong>Launch the Application:</strong> Click the "Launch Infinity Gauntlet" button above</li>
+                <li><strong>Explore the Gauntlet:</strong> Use your mouse to rotate and zoom the 3D model</li>
+                <li><strong>Activate Stones:</strong> Click on individual stones to see their unique effects</li>
+                <li><strong>Toggle Stones:</strong> Use the UI panel to enable/disable specific stones</li>
+                <li><strong>Perform the Snap:</strong> Click the "SNAP" button for the full effect</li>
+                <li><strong>Customize Settings:</strong> Adjust audio volume, auto-rotation, and effect intensity</li>
+            </ol>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🔮 Future Enhancements</h2>
+            <p>This is just the beginning! Planned features include:</p>
+            <ul>
+                <li>VR/AR support with WebXR</li>
+                <li>High-resolution 3D models with detailed textures</li>
+                <li>Haptic feedback for mobile devices</li>
+                <li>Multiplayer mode for stone collection</li>
+                <li>3D printing support for physical replicas</li>
+                <li>Advanced particle effects and shaders</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        function demoStone(stoneName) {
+            const button = event.target;
+            const originalText = button.textContent;
+            
+            // Visual feedback
+            button.style.transform = 'scale(0.95)';
+            button.textContent = 'ACTIVATED!';
+            
+            // Create temporary effect
+            const effect = document.createElement('div');
+            effect.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 1000;
+                animation: stoneEffect 1s ease-out forwards;
+            `;
+            
+            // Set color based on stone
+            const colors = {
+                space: '#0066ff',
+                mind: '#ffdd00',
+                reality: '#ff4444',
+                power: '#aa44ff',
+                time: '#44ff44',
+                soul: '#ff8844'
+            };
+            
+            effect.style.background = `radial-gradient(circle, ${colors[stoneName]}, transparent)`;
+            effect.style.boxShadow = `0 0 50px ${colors[stoneName]}`;
+            
+            document.body.appendChild(effect);
+            
+            // Add CSS animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes stoneEffect {
+                    0% { transform: translate(-50%, -50%) scale(0); opacity: 1; }
+                    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.8; }
+                    100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Reset button after effect
+            setTimeout(() => {
+                button.style.transform = 'scale(1)';
+                button.textContent = originalText;
+                document.body.removeChild(effect);
+                document.head.removeChild(style);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

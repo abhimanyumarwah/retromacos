@@ -1,0 +1,57 @@
+:root{--silver-top:#fbfbfd;--silver-mid:#eef1f5;--silver-bottom:#dde2ea;--ink:#000;--lcd:#e9eee7;--lcd-ink:#111;--shadow:#00000020;--bezel:#e6e6e6;--press:#00000040}
+
+.ipod-frame{display:flex;align-items:center;justify-content:center;height:100%}
+.ipod-body{width: 340px; border:1px solid #000; border-radius: 30px; padding: 16px 16px 14px; background: linear-gradient(var(--silver-top),var(--silver-mid) 50%,var(--silver-bottom)); box-shadow: 0 8px 18px var(--shadow), 2px 2px 0 #000}
+.ipod-screen{height: 200px; border:1px solid #000; border-radius: 10px; background: linear-gradient(#ffffff,#f6f8fb); box-shadow: inset 0 0 0 2px var(--bezel), inset 0 10px 20px #ffffff80}
+
+/* Arrange screen + wheel with tight spacing */
+.screen-wrap{display:flex;flex-direction:column;gap:8px;height:100%;justify-content:space-between}
+.status-bar{display:flex;align-items:center;justify-content:space-between;padding:4px 8px}
+.status-bar .clock{font-weight:700}
+.status-bar .battery .icon{position:relative;width:40px;height:12px;border:1px solid #000;background:#e6e6e6}
+.status-bar .battery .icon .cap{position:absolute;right:-4px;top:2px;width:3px;height:8px;border:1px solid #000;background:#fff}
+.status-bar .battery .icon .level{display:block;height:100%;background:#39c46a}
+
+.screen-content{display:flex;flex-direction:column;gap:8px;padding:8px;height:100%;background:linear-gradient(180deg,var(--lcd),#f7faf6);color:var(--lcd-ink);box-shadow: inset 0 0 40px rgba(0,0,0,0.05)}
+
+.controls{display:flex;flex-wrap:wrap;gap:8px;padding:4px 8px;justify-content:center}
+.controls .pill{border:1px solid #000;background:#fff;border-radius:12px;padding:4px 10px;box-shadow:2px 2px 0 #000;cursor:pointer;font-size:12px}
+.controls .pill.active{background:#000;color:#fff}
+.controls .group{display:flex;align-items:center;gap:6px}
+.controls .opt{border:1px solid #000;background:#fff;border-radius:10px;padding:2px 6px;cursor:pointer;box-shadow:1px 1px 0 #000;font-size:12px}
+.controls .opt.active{background:#000;color:#fff}
+
+/* Wheel refined */
+.wheel{position:relative;margin: 8px auto 0;width: 220px; height: 220px; border:1px solid #000; border-radius:50%; background:
+  conic-gradient(#0000 calc(var(--progress, 0) * 1turn), #000 calc(var(--progress, 0) * 1turn), #000 0),
+  radial-gradient(circle at 50% 45%, #ffffff 0, #f0f0f0 60%, #e3e3e3 100%);
+ box-shadow: inset 0 10px 15px rgba(0,0,0,0.06), 2px 2px 0 #000}
+.wheel.glow{box-shadow: 0 0 14px rgba(0,0,0,0.25), inset 0 10px 15px rgba(0,0,0,0.06), 2px 2px 0 #000}
+.wheel .btn{position:absolute;border:1px solid #000;background:linear-gradient(#fff,#e9e9e9);cursor:pointer;box-shadow:2px 2px 0 #000;border-radius:6px;padding:0}
+.wheel .btn:active{transform: translate(2px,2px); box-shadow: 0 0 0 #000;}
+.wheel .menu{top: 12px; left: calc(50% - 30px); width:60px; height:26px;}
+.wheel .prev{left: 12px; top: calc(50% - 16px); width:52px; height:28px;}
+.wheel .next{right: 12px; top: calc(50% - 16px); width:52px; height:28px;}
+.wheel .play{bottom: 12px; left: calc(50% - 42px); width:84px; height:26px;}
+.wheel .select{position:absolute; left: calc(50% - 44px); top: calc(50% - 44px); width: 88px; height: 88px; border-radius:50%; border:1px solid #000; background: linear-gradient(#e9e9e9,#dcdcdc); box-shadow: inset 0 0 0 2px #cfcfcf; cursor: pointer;}
+
+/* Menu */
+.menu{width:100%;height:100%;display:flex;flex-direction:column}
+.menu .title{font-weight:700;padding:6px 8px;border-bottom:1px solid #000;background:#eaf0f7}
+.menu ul{list-style:none;margin:0;padding:0}
+.menu li{padding:6px 8px;border-bottom:1px dotted #aaa}
+.menu li.active{background:#000;color:#fff}
+
+/* Now Playing */
+.now{width:100%;height:100%;display:flex;flex-direction:column}
+.now .meta{display:flex;align-items:center;gap:8px}
+.now .meta .art{width:56px;height:56px;border:1px solid #000;background:#fff;object-fit:cover;border-radius:4px}
+.now .meta .art.placeholder{background: repeating-linear-gradient(45deg,#eee,#eee 6px,#ddd 6px,#ddd 12px)}
+.now .meta .text .title{font-weight:700}
+.now .meta .text .artist{font-size:12px;color:#444}
+.now .bar{height:6px;border:1px solid #000;background:#e6e6e6;position:relative;border-radius:6px;overflow:hidden}
+.now .bar .fill{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(#000,#333);width:0}
+.now .status{font-size:12px;color:#333}
+
+/* Backlight */
+.screen-inner.backlight, .screen-content.backlight{box-shadow: inset 0 0 48px rgba(255,255,200,0.35)}
